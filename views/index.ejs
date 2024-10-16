@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocktail Bar</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <h1>Mocktail Bar🥂🍷🍸🍾🍹</h1>
+
+
+
+    <div class="img">
+        <img src="<%= data.drinks[0].strDrinkThumb %>" />
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/QlR5DfBVACk">
+        </iframe>
+    </div>
+
+    <div class="hidden">
+        <% if(locals.data.drinks[0].strDrink) {%>
+
+            <h2>
+                <%=data.drinks[0].strDrink%>
+            </h2>
+            <h3>Ingredients:</h3>
+            <ul id="ingredientsList">
+                <li>
+                    <%= data.drinks[0].strIngredient1 %>, <%= data.drinks[0].strIngredient2 %>
+                </li>
+                <li>
+                    <%= data.drinks[0].strIngredient3 %>
+                        <%= data.drinks[0].strIngredient4 %>
+                </li>
+                <li>
+                    <%= data.drinks[0].strIngredient5 %>
+                        <%= data.drinks[0].strIngredient6 %>
+                </li>
+                <li>
+                    <%= data.drinks[0].strInstructions %>
+
+                </li>
+
+
+
+            </ul>
+            <% }else{ %>
+                <h2> Your favorite recipe</h2>
+
+                <% } %>
+
+    </div>
+</body>
+
+</html>
